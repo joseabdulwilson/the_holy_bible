@@ -1,0 +1,855 @@
+%\\DOCUMENT CLASS ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\documentclass[12pt,a4paper]{article}
+\usepackage{geometry} 				% Package used for setting up page properties
+ \geometry{
+ a4paper,
+ left=1.5cm,								% Left margin size
+ right=1.5cm,								% Right margin size
+ top=2.5cm,									% Header size
+ bottom=3cm,								% Footer size
+ }
+\usepackage{chemfig}				% Package for creating chemical figures 
+\usepackage{tabu}					% Page wide tables
+\usepackage{hyperref}				% Package used for managing hyperlinks
+\hypersetup{						% Specifications for hyperlinks
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+	%\href{Link}{Display name} \url{} \hyperlink{Fromhere}{Tohere}
+}
+\usepackage{graphicx} 					%Picture display package
+	\graphicspath{ {./images/} } 			%Path to where images are stored
+\usepackage{float} 						%Force picture position
+\usepackage{color}						%Define colors for code box
+	\definecolor{dkgreen}{rgb}{0,0.6,0}
+	\definecolor{holyred}{rgb}{0.8,0,0}
+	\definecolor{gray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mauve}{rgb}{0.58,0,0.82}
+	\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\usepackage{listings}					%Package for code box
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	numberstyle=\tiny\color{codegray},
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	%numbers=left,
+	numbersep=5pt,                  
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{holyred},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4
+}
+	\lstset{style=mystyle}				%Apply style to code box
+
+
+%\\TITLE & AUTHOR ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\title{The Holy Bible} 
+\date{}
+\author{B===D}
+
+%\\DOCUMENT START ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\begin{document}
+\maketitle
+
+\section{TMUX}
+
+%------------------------------------------------------------------------------
+\section{UNIX Utilities}
+\subsection{File System}
+\subsubsection{WHICH}
+\subsubsection{BASENAME}
+\subsubsection{CAT}
+\subsubsection{DU}
+\subsubsection{LESS}
+\subsubsection{LOCATE}
+\subsubsection{FIND}
+\subsection{Users and Groups}
+\subsubsection{CHAGE}
+\subsubsection{PASSWD}
+\subsection{Process Management}
+\subsubsection{PARALLEL}
+\subsection{Back Ups}
+\subsection{Containers}
+\subsection{RAT}
+\subsection{System Info}
+\subsection{Network}
+\subsection{Scheduling}
+\subsection{Signals}
+\subsection{Package Mngmt}
+\subsection{Sys Mon}
+\subsection{Stress Testing}
+\subsubsection{TIME}
+\subsubsection{STRESS}
+\subsection{File Ops}
+\subsubsection{SORT}
+\subsection{Hardware}
+\subsubsection{LSCPU}
+
+%------------------------------------------------------------------------------
+\section{BASH}
+\subsection{Shells}
+A list of available shells can be obtained with
+\begin{lstlisting}[language=bash]
+cat /etc/shells
+\end{lstlisting}
+
+\subsection{Term Sexy B===D (\_\_!\_\_)}
+\subsection{UI}
+\subsection{It erate Zion}
+\begin{center}
+\begin{lstlisting}[language=Bash]
+for i in $(seq 1 10); do
+	echo $i
+done
+\end{lstlisting}
+\end{center} 
+
+
+\subsection{Comparisons}
+
+\subsubsection{Files and Dirs}
+Bash allows to test the status of files and directories on the linux 
+filesystem with the following:
+
+\begin{itemize}
+	\item -d <file>  Checks if file exists and is a directory
+	\item -e <file>  Checks if file exists
+	\item -f <file>  Checks if file exists and is a file
+	\item -r <file>  Checks if file exists and is readable
+	\item -s <file>  Checks if file exists and is not empty
+	\item -w <file>  Checks if file exists and is writable
+	\item -x <file>  Checks if file exists and is executable
+	\item -O <file>  Checks if file exists and is owned by the current user
+    \item -G <file>  Checks if file exists and default group similar as the current user
+	\item <file1> -nt <file2>    Checks if file1 is newer than file2
+	\item <file1> -ot <file2>    Checks if file1 is older than file2
+\end{itemize}
+
+\subsection{Arrghh Hey ?!}
+
+
+\subsection{Shell Expansion}
+
+\subsection{Functions}
+
+\subsection{IFS}
+
+ %------------- -----------------------------------------------------------------
+\section{VIM}
+\subsection{.vimrc}
+\subsection{Folding}
+\subsection{Line ops}
+
+\begin{center}
+\begin{table}[!htbp]
+\begin{tabu}{ X[l] X[l] }
+\hline
+Command& Use\\
+\hline
+\hline
+J & Join with space separator between lines\\
+gJ & Join without space separator between lines\\
+gq <motion> gql & Split lines based on :set textwidth=xx\\
+\hline
+\end{tabu}
+\end{table}
+\end{center}
+
+
+\subsection{Buffers, windows and tabs}
+bd buffer delete (closes current buffer)
+
+\subsection{Window Management}
+
+\subsection{Tmux Integration}
+\subsection{Debugging in Vim}
+
+\begin{center}
+\begin{lstlisting}[]
+:packadd termdebug
+Termdebug
+\end{lstlisting}
+\end{center}
+
+\section{SQL}
+\subsection{SimplSampl}
+%------------------------------------------------------------------------------
+\section{C}
+
+\subsection{Types}
+
+\subsection{Control flow}
+\begin{center}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	printf("Hello World\n");
+	return EXIT_SUCCESS;
+ }
+\end{lstlisting}
+\end{center}
+
+\subsubsection{For}
+\subsubsection{While}
+\subsubsection{Break}
+\subsubsection{Enum}
+\subsubsection{Switch}
+
+\subsection{Structs}
+\subsubsection{Declaration}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=.7]{c1.png}
+	\caption{How to declare a struct}
+	\label{fig:struct_declaration}
+\end{figure}
+
+\subsection{Pointers}
+
+
+\subsection{Functions}
+
+\subsection{Arrays}
+
+\subsubsection{Declaring arrays}
+An array is a sequence of items of the same type (e.g., an array of ints is 
+a sequence of ints). When an array is created, we must specify its size.
+Here we declare an array of size 4.
+
+\begin{lstlisting}[language=C]
+int myArray[4];
+\end{lstlisting}
+
+The variable name "myArray" is a pointer to the 4 boxes that make up the array
+Unlike other variables myArray is not an lvalue and we cannot change where it
+points
+
+There are four boxes which are not initialized and myArray has no box, it is
+just a name for an arrow pointing at the first box. To add elements to the
+array we just write the initialization data in curly braces.
+
+\begin{lstlisting}[language=C]
+int myArray[4] = {42, 39, 16, 7};
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[language=C]
+int myArray[4] = {0}; // Initializes all elements to 0
+\end{lstlisting}
+
+If we provide an initializer (i.e. values upon declaration) we can also omit the
+array size
+
+
+\begin{lstlisting}[language=C]
+int myArray[] = {42, 39, 16, 7}; // The compiler figures out [4]
+\end{lstlisting}
+
+
+ Accessing an array out of bounds (at any element that does not exist) is an 
+ error that the compiler cannot detect. If you write such code, your program 
+ will access some box, but you do not know what box it actually is. This 
+ behavior is much the same as the erroneous behavior we discussed when we 
+ talked about pointer arithmetic. In fact, pointer arithmetic and array 
+ indexing are exactly the same under the hood, the compiler turns 
+ myArray[i] into *(myArray + i)
+
+
+If we take \&myArray[i], it is equivalent to \&*(myArray +i), and the \& and * 
+cancel, they are inverse operators), so it is just myArray + i. In practice
+\&myArray[i] says \textbf{“give me an arrow pointing at the ith box of myArray”}
+while myArray + i says \textbf{“give me a pointer i boxes after where myArray 
+points”}—these are two different ways to describe the same thing.
+
+\subsubsection{Arrays with Pointer Arithmetic}
+
+The below code will sum up the elements of a predefined array. The first thing 
+we're going to do is declare and initialize an array of four elements. We put 
+them in main's frame with four boxes, one that holds four, one that holds six, 
+one that holds eight, and one that holds three. Now we call the function sum
+array passing in data, which is a pointer to that array and four as the number
+of elements. Inside sum array, we declare a variable answer which equals zero,
+and int * pointer which points at the same place as the array parameter passed
+in.
+
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int sumArray(int * array, int n) {
+	int answer = 0;
+	int * ptr = array;
+	for (int i =0; i < n; i++) {
+		answer += *ptr;
+		ptr++;
+	}
+	return answer;
+}
+
+int main(void) {
+	int data[4] = {4, 6, 8, 3};
+	int sum = sumArray(data, 4);
+	printf("%d\n", sum);
+	return EXIT_SUCCESS;
+}
+\end{lstlisting}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[scale=0.80]{c5.png}
+\end{figure}
+
+
+\subsubsection{Arrays with Pointer Indexing}
+
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+
+int sumArray(int * array, int n) {
+	int answer = 0;
+	for (int i =0; i < n; i++) {
+		answer += array[i];
+	}
+	return answer;
+}
+
+int main(void) {
+	int data[4] = {4, 6, 8, 3};
+	int sum = sumArray(data, 4);
+	printf("%d\n", sum);
+	return EXIT_SUCCESS;
+}
+\end{lstlisting}
+
+\subsubsection{Passing arrays as parameters}
+
+When we want to pass an array as a parameter we want to:
+\begin{itemize}
+	\item Pass a pointer to the array
+	\item Pass an integer specifying how many elements are in the array
+\end{itemize}
+
+\begin{lstlisting}[language=C]
+int myFunction(int * myArray, int size) {
+	<code>
+}
+\end{lstlisting}
+
+When we pass a pointer that actually points at an array, we can index it like
+an array (the name of an array variable is just a pointer), and perform pointer
+arithmetic on it. Such pointer arithmetic will be well defined, as long as the
+resulting pointer remains within the bounds of the array, as we are guaranteed
+that the array elements are sequential in memory.
+
+\begin{lstlisting}[language=C]
+int myFunction(int  myArray[], int size) {
+	<code>
+}
+\end{lstlisting}
+
+\subsubsection{Dangling Pointers}
+When you write code with arrays, you may be tempted to return an array from a
+function, however, we must be careful, because the storage space for the arrays
+created without memory allocation live in the stack frame, and thus are
+deallocated after the function returns. \textbf{The value of the expression
+that names the array is just a pointer to that space, so all that gets copied
+to the calling function is an arrow pointing at something that no longer
+exists}. Whenever you have a pointer to something whose memory has been
+deallocated, \textbf{it is called a dangling pointer}. Dereferencing a dangling
+pointer results in undefined behavior (and thus represents a serious problem
+with your code) because you have no idea what values are at the end of the
+arrow.
+
+A value stored in memory will remain there until changed by the program and a
+deallocated memory location may not be reused immediately. Once a function
+returns and its frame is destroyed, \textbf{the memory locations that were part
+of that frame will not be reused until more values must be placed on the stack.
+If we call another function, its frame will be placed in the next available
+stack slots, overwriting the recently deallocated memory. Only at this point
+will the values associated with the deallocated stack frame change (due to
+assignments to variables in the new frame). Now writing to memory through the
+dangling pointer will change variables in that frame in unpredictable ways.}
+Note that is not safe to use a dangling pointer into a deallocated frame even
+when you have not called another function—even though most stack allocations
+will come from calling a function, there is nothing to guarantee that those are
+the only way that the stack is used.
+
+\begin{lstlisting}[language=C]
+\\Broken code ! DO NOT IMPLEMENT !
+#include <stdio.h>
+#include <stdlib.h>
+
+int * initArray(int howLarge) {
+	int myArray[howLarge];
+	for (int = 0; i < howLarge; i++) {
+		myArray[i] = i;
+	}
+	return myArray;
+}
+
+int main(void) {
+	int * p = initArray(2);
+	for (int i = 0; i < 2; i++) {
+	printf("%d\n, p[i]");
+	}
+	return EXIT_SUCCESS
+}
+
+\end{lstlisting}
+
+\subsubsection{Array Size}
+What data type should we use to describe the size of an array ? Since arrays do
+not have negative values we should potentially use unsigned int but these come
+in different size.  In C, the number of bits we would need varies from one
+platform to another on a 32-bit platform (meaning memory addresses are 32
+bits), we would want a 32-bit unsigned int; on a 64-bit platform we would want
+a 64 bit unsigned int. Fortunately, the designers of C realized this
+possibility, and decided to make a type name for “unsigned integers that
+describe the size of things” \verb|size_t|. Whenever you see \verb|size_t| you
+should think “unsigned int with the right number of bits to describe the size
+or index of an array.”
+
+\begin{lstlisting}[language=C]
+for (size_t i = 0,; i < n; i++) {
+	<code>
+}
+\end{lstlisting}
+
+We do not know how many bytes an \verb|int| or a pointer is, as their actual
+sizes can vary from one platform to another. Instead of writing a numerical
+constant that represents the size on one platform, we should let the C compiler
+calculate the size of a type with the \verb|sizeof| operator. The\verb|sizeof|
+operator takes one operand, which can either be a type name (e.g.,
+\verb|sizeof(double)|) or an expression (e.g.,\verb| sizeof(*p)|). If the
+operand is an expression, the compiler figures out the type of that expression
+(remember expressions have types), and evaluates the size of that type. In
+either case, \verb|sizeof| evaluates the number of bytes which the type
+requires.
+
+\subsection{Strings}
+
+\subsubsection{Immutable strings}
+
+We have seen string literals so far—a sequence of characters written down in
+quotations marks, such as \verb|"Hello World\n"|.  Now, that we understand
+pointers, we can understand their type: \verb|const char *| that is, a pointer
+to characters which cannot be modified (recall that here, the \verb|const|
+modifies the chars that are pointed-to).  That is, if we wanted to have a
+variable which points to a string literal, we might write:
+
+\begin{lstlisting}[language=C]
+const char * str = "Hello World\n";
+\end{lstlisting}
+
+This code declares and initializes the variable \verb|str| as such
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c8.png}
+\end{figure}
+
+\verb|str| is a pointer, pointing at an array of characters. These characters
+appear in the order of the string, and are followed by the null terminator
+character, \verb|'\0'| (note that we do not need to write this character down
+in the string literal—the compiler adds it for us for literals only). Below the
+conceptual representation of the string, the figure shows its numeric
+representation—the string is just a sequence of bytes (8-bit numbers) in
+memory, the last of which has a numeric value of 0.
+
+Notice that we used \verb|const| indicating that we cannot modify the
+characters pointed to by \verb|str| (that is, assignment to \verb|str[i]| will
+result in a compiler error). If we forget the \verb|const| modifier,
+unfortunately, the code will still compile (we can receive a warning for this
+type of mistake with \verb|-Wwrite-strings|, which is not enabled by default
+with \verb|-Wall|. However, if we omit \verb|const| and try to modify the
+string, the program will crash with a segmentation fault.
+
+The reason the program will crash if you attempt to modify a string literal is
+that the data for the string literal is stored into a read only portion of the
+static data section. The figure below shows the variable pointing at the string
+literal from the figure above in the context of the “picture of memory”. 
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c9.png}
+\end{figure}
+
+The data for the string literal (the actual bytes that make up the string)
+reside in the read only portion of the static data section for the entire
+lifetime of the program from the time that it is loaded into memory until it
+exits. This data is placed into memory by the loader (the portion of the
+operating system which reads the executable file from the disk and initializes
+its memory appropriately). The loader knows what to write for the string
+literals (and where they should go in memory) because the compiler writes
+information into the executable file describing the contents of the data
+section. After the loader finishes initializing memory, it marks the read-only
+portions of the static data section as non-writeable in the page table—the
+structure that the operating system maintains to describe the program’s memory
+to the hardware.
+
+Attempting to write to a read-only portion of memory will behave much like
+writing to an invalid region of memory—it will cause the hardware to trap into
+the operating system—transferring execution control from your program to the OS
+kernel (conceptually, the hardware takes the execution arrow out of your
+program, and puts it into a particular function in the OS, noting where the
+execution arrow was in case the OS wants to return control to your program).
+The OS then sees that the program was attempting to access memory in invalid
+ways, and kills it with a segmentation fault.
+
+\begin{lstlisting}[language=C]
+char * str1 = "Hello";
+str1[0] = 'J';  // this would crash, but suppose it did not
+char * str2 = "Hello";
+printf("%s\n", str2);
+\end{lstlisting}
+
+Both occurrences of the literal "Hello" evaluate to pointers to the location
+where the characters of that string is stored. The compiler is free to put the
+two identical string literals in one location, meaning \verb|str1| and
+\verb|str2| could point at the same memory. If modifying this memory were
+allowed, printing \verb|str2| would print \verb|"Jello",| which would be
+confusing. In a worse case, modifying string literals could pose a wide range
+of issues, from strange behaviors to security problems. Note that even if the
+literal appears in only one place in the program, it may get re-used multiple
+times (inside a loop, in a function that is called more than once, etc.) in
+such a case, our expectation as a programmer is that the literal will always be
+what we wrote, and it has not been changed by previous code.
+
+\subsubsection{Mutable strings}
+
+When we want to modify a string we need the string to reside in writeable memory
+. For instance the frame of a function or memory that is dynamically allocated
+by \verb|malloc|. To make space for a string in a function's frame we need to
+declare an array with sufficient space to hold all of its characters plus the 
+null terminator.
+
+\begin{lstlisting}[language=C]
+char str[] = "Hello World\n";
+\end{lstlisting}
+
+This code behaves exactly as if we wrote:
+
+\begin{lstlisting}[language=C]
+char str[] = {'H', 'e', 'l', 'l', 'o', ' ',
+              'W', 'o', 'r', 'l'  'd', '\n', '\0'};
+\end{lstlisting}
+
+It declares a variable \verb|str| which is an array of 13 characters (the size
+of an array may be implicit if we provide an initializer from which the
+complier can determine the size), and initializes it by copying the characters 
+of the string \verb|"Hello World\n"| (including the null terminator) into that
+array. Another way to put it would be as following:
+
+\begin{lstlisting}[language=C]
+char str[13];
+str[0]  = 'H';
+str[1]  = 'e';
+str[2]  = 'l';
+str[3]  = 'l';
+str[4]  = 'o';
+str[5]  = ' ';
+str[6]  = 'W';
+str[7]  = 'o';
+str[8]  = 'r';
+str[9]  = 'l';
+str[10] = 'd';
+str[11] = '\n';
+str[12] = '\0';
+\end{lstlisting}
+
+\noindent
+The difference between declaring \verb|str| as
+\verb|const char *| versus \verb|char str[]|. The figure shows the difference
+between a string declared as a pointer to a literal (left) and as an array
+initialized by a litteral.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c10.png}
+\end{figure}
+
+We can declare the array \verb|str| with an explicit size, but we must be
+careful if we do not include enough space for the null terminator (i.e., we
+declare it \verb|char str[12]="Hello World\n";|), the compiler will not
+complain. Instead, it will initialize the character array exactly as we have
+requested, but there will be no \verb|'\0'| placed at the end. The compiler
+allows this behavior since it makes for a perfectly valid array of characters,
+even though it is not a valid string. If we only compute on the array in such
+ways that it only accesses those 12 characters, our program is fine. However,
+if we use that array for anything (e.g., pass it to \verb|printf| or any of the
+string library functions that you will learn about soon) that expects an actual
+string (i.e., one with a null terminator on the end), then the array will be
+accessed past its bounds.
+
+Failing to terminate the string may not always appear in testing—you might “get
+lucky” and have the next byte of memory already be 0 anyways. While this may
+seem nice your program “works”—it is actually quite a dangerous sort of
+problem. You may test your program a thousand times and not see any errors,
+then deploy it and have it crash or produce incorrect results. We strongly
+recommend the use of tools such as valgrind which are capable of detecting this
+sort of error.
+
+It is perfectly fine, however, to request more space than is required for your
+string. For example, \verb|char str[100] = "Hello World\n"|; is entirely
+legitimate. We may wish to request extra space in this fashion if we plan to
+add to the string, making it longer. Of course, whenever we do so, we must be
+sure that we have enough space for whatever we may want our string to hold.
+(Remember that the programmer is responsible for keeping track of the size of
+her arrays. There is no way to inspect an array and derive its size.)
+
+\subsubsection{String Equality}
+
+To compare two strings our first inclination might be to use the \verb|==|
+operator. However the \verb|==| will compare pointer equality. That is if we
+write \verb|str1 == str2| it will check if \verb|str1| and \verb|str2| are
+arrows \textbf{pointing at the same place}. What if we want to check if the two
+strings have the same sequence of characters, even if they are in different
+locations in memory?
+
+ 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c11.png}
+\end{figure}
+This figure illustrates applying the == operator to two ’string’ just compares the pointers for equality.
+
+You can write a function to test if two strings have the same contents that is,
+if they contain exactly the same sequence of characters. The task is common
+enough that there is already a function to do it called \verb|strcmp|in
+\verb|string.h| of the C library. 
+
+The C library \verb|strcmp| function behaves slightly differently than the one
+we are about to write in the video it returns 0 if the strings are equal, and
+non-zero if they are different. In fact, it returns a positive number if the
+first string is “greater than” the second string and a negative number if the
+first string is “less than” the second string. Here “greater than” and “less
+than” refer to lexicographic order  what you would think of as “alphabetical
+ordering,” but extended to encompass the fact that strings may have
+non-letters. \textbf{The comparison is case sensitive (so abc is different from
+Abc), but there is another function, strcasecmp which performs case-insensitive
+comparison}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c12.png}
+\end{figure}
+
+\subsubsection{String copying}
+
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c13.png}
+\end{figure}
+
+
+The right side of the assignment statement \verb|str2| evaluates to an arrow pointing at the second string ("Blueberry"). We will take that value of the pointer (memory address) and copy it. The result is that both \verb|str1| and \verb|str2| point at the same memory location, as depicted in the figure below which shows the state of the program after executing the above line of code. If these strings are pointing at modifiable memory locations, and we later change the contents of one (e.g., we execute \verb|str1[0]='x';|) then if we “look at” that memory location through its other name (\verb|str2[0]|), we will “see” the change.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c14.png}
+\end{figure}
+
+We may, however, want to actually copy the contents of the string from one location to another. As with comparing for equality, doing this copy yourself requires iterating through the characters of the string and copying them one by one to the destination. In doing so, \textbf{we must be careful that the destination has sufficient space to receive the string being copied into it.}
+
+The C library has a function, \verb|strncpy| which performs this task, it copies a string from one location to another, and takes a parameter \verb|(n)| telling it the maximum number of characters it is allowed to copy. \textbf{If the length of the source string is greater than or equal to n}, then the destination is not null terminated a situation which the programmer must typically rectify before using the string for any significant purpose.
+
+Note that there is a similarly named function, \verb|strcpy|. The \verb|strcpy| function is more dangerous, as there is no way to tell it how much space is available in the destination. \textbf{If insufficient space is available, then strcpy will simply overwrite whatever follows it in memory, creating a variety of problems}. Some of these problems may result in security hazards. There is another function, \verb|strdup| which allocates space for a copy of the string, and copies it into that space.
+
+
+
+\subsubsection{Converting strings to ints}
+One important fact to remember when using strings is that they cannot be implicitly converted to integers (or floating point types) by casting either implicit or explicit. Consider the following code fragment:
+
+\begin{lstlisting}[language=C]
+const char * str = "12345";
+int x = str;
+\end{lstlisting}
+
+Attempting to compile this code results in the following error message:
+
+\begin{lstlisting}[language=Bash]
+initialization makes integer from pointer without a cast
+\end{lstlisting}
+
+This error arises because the assignment does not convert the number that the string represents textually into an integer (that is, it does not result in x=12345). Instead, it would take the numerical value of \verb|str| (which is a pointer, thus its numerical value is the address in memory where the sequence of characters 12345 is stored) and assign it to x.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.80]{c15.png}
+\end{figure}
+
+
+
+
+\subsubsection{Standard Library Functions}
+
+
+\subsection{Compiling}
+
+\subsection{Debugging}
+
+Tools
+\begin{itemize}
+	\item GDB
+	\item CLANG
+	\item VALGRIND
+	\item INFER
+	\item CMOCKA
+\end{itemize}
+
+\subsubsection{GDB}
+\subsubsection{VALGRIND}
+
+\section{REGEXP}
+
+
+\section{LaTeX}
+\subsection{Article template}
+
+
+\subsection{Images}
+Include one image in the text:
+\begin{center}
+\begin{lstlisting}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.40]{<filename>}
+	\caption{<Image caption>}
+	\label{fig:image1}
+\end{figure}
+\end{lstlisting}
+\end{center}
+Include two images side by side:
+\newpage
+
+\subsection{Tables}
+
+\subsubsection{Page wide}
+Page wide tables, requires the "usepackage\{tabu\}" command in the document
+header. Example below:
+
+\begin{center}
+\begin{table}[!htbp]
+\begin{tabu}{ X[l] X[r] }
+	\hline
+ Library Name& Use\\
+ 	\hline
+ 	\hline
+ Pandas & Data frame handling\\
+ Numpy & n-Dimensional matrix handling\\
+ PySpTools & Hyper-spectral Imaging tools\\
+ SciKitLearn &  Machine Learning, Data Preprocessing\\
+ PeakUtils & Peak finding algorithms\\
+ PyMongo & Python interaction with MongoDB\\
+ JSON & Data-interchange format tools\\
+ MatPlotLib & Visualisation Library\\
+ Bokeh & Interactive Visualisation Library\\
+ Seaborn & Statistical computation and visulation\\
+ Glob & File system interaction\\
+  	\hline
+\end{tabu}
+\caption{Main Python libraries used to process data during our research}
+\label{table:pythonlib}
+\end{table}
+\end{center}
+
+\begin{center}
+	\begin{lstlisting}
+\begin{center}
+\begin{table}[h]
+\begin{tabu}{ X[l] X[r] }
+	\hline
+ Library Name & Use\\
+ 	\hline
+ 	\hline
+ Pandas & Data frame handling\\
+ Seaborn & Statistical computation and visulation\\
+  	\hline
+\end{tabu}
+\caption{<table_caption>}
+\label{<table:name1>}
+\end{table}
+\end{center}
+	\end{lstlisting}
+\end{center}
+\newpage
+\subsubsection{centered table}
+
+\begin{table}[!htbp]
+	\centering
+	\begin{tabular}{ c c c c c }
+	\hline
+Bond & Vibration & Geometry & $\approx\mu m$ Start & $\approx\mu m$ Finish\\ 
+ 	\hline
+ 	\hline
+\chemfig{C - H}& S/AS& Stretch& 3.33& 3.53\\  
+\chemfig{CH_{3}}& AS& Stretch& 3.37& 3.37\\
+\chemfig{CH_{3}}& S& Stretch& 3.48& 3.48\\	
+\chemfig{CH_{2}}& AS& Stretch& 3.41& 3.41\\
+\chemfig{CH_{2}}& S& Stretch& 3.5& 3.5\\
+\chemfig{O - H}& Free & Stretch& 2.70& 2.79\\
+\chemfig{O - H}& Intermolecular & Stretch& 2.89& 3.12\\
+\chemfig{O - H}& Intramolecular& Stretch& 2.79& 2.90\\
+\chemfig{N - H} Amide 1& AS& Stretch&2.84 &2.84 \\
+\chemfig{N - H} Amide 1& S& Stretch& 2.95& 2.95\\
+\chemfig{N - H} solid Amide 1& AS& Stretch& 2.98& 2.98\\
+\chemfig{N - H} solid Amide 1& S& Stretch&3.14 &3.14\\
+\chemfig{N - H} Amide 1& Free& Stretch&2.85 &2.94\\
+\chemfig{N - H} solid Amide 1& Free& Stretch&3.00 &3.26\\
+	\hline
+\end{tabular}
+\caption{Main organics related absorbption bands induced by electronic transitions that could be expected over the MicrOmega spectral range ($0.9-3.65$ $\mu m$).}
+\label{table:OrgBands}
+\end{table}
+
+\begin{lstlisting}
+\begin{table}[!htbp]
+	\centering
+	\begin{tabular}{ c c c c c }
+	\hline
+Bond & Vibration & Geometry & $\approx\mu m$ Start & $\approx\mu m$ Finish\\
+ 	\hline
+ 	\hline
+\chemfig{C - H} & S/AS & Stretch & 3.33 & 3.53\\
+\chemfig{CH_{3}} & AS & Stretch & 3.37 & 3.37\\
+\chemfig{O - H} & Intermolecular & Stretch & 2.89 & 3.12\\
+\chemfig{N - H} Amide 1 & AS & Stretch & 2.84 & 2.84 \\
+	\hline
+\end{tabular}
+\caption{<Table_title>}
+\label{table:OrgBands}
+\end{table}
+\end{lstlisting}
+
+
+\subsection{References}
+
+\subsection{Appendix}
+
+\section{Figlet}
+Lorem ipsum dolor
+\begin{center}
+\begin{lstlisting}[language=Bash]
+ _            _   
+| |_ ___  ___| |_ 
+| __/ _ \/ __| __|
+| ||  __/\__ \ |_ 
+ \__\___||___/\__|
+                  
+\end{lstlisting}
+\end{center}
+\end{document}
+
+
